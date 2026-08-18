@@ -1,0 +1,191 @@
+/* RESET REGOLE */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+    background-color: #f7f7f7;
+    color: #111111;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* TYPOGRAPHY EDITORIALE */
+h1, h2, h3 {
+    font-family: 'Cormorant Garamond', serif;
+    font-weight: 300;
+}
+
+/* BRAND HEADER - TITOLO MOLTO PIÙ IN RISALTO */
+.header {
+    padding: 7rem 2rem 4rem;
+    text-align: center;
+}
+
+.brand h1 {
+    font-size: 3.5rem; /* Ingrandito notevolmente */
+    letter-spacing: 0.2em;
+    font-weight: 400;
+    margin-bottom: 0.5rem;
+    line-height: 1.1;
+}
+
+.brand span {
+    font-size: 0.75rem;
+    letter-spacing: 0.5em;
+    color: #666;
+    display: block;
+}
+
+/* INTRO SLOGAN */
+.intro {
+    max-width: 600px;
+    margin: 0 auto 5rem;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.intro p {
+    font-family: 'Cormorant Garamond', serif;
+    font-style: italic;
+    font-size: 1.35rem;
+    line-height: 1.4;
+    color: #444;
+}
+
+/* PORTFOLIO - FOTO PIÙ PICCOLE E RACCOLTE */
+.portfolio {
+    max-width: 800px; /* Ridotto il contenitore per rimpicciolire le foto */
+    margin: 0 auto;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 5rem; /* Spaziatura più compatta */
+}
+
+.project-item {
+    width: 100%;
+}
+
+.image-box {
+    width: 100%;
+    height: 40vh; /* Ridotta l'altezza delle immagini (prima era 70vh) */
+    overflow: hidden;
+    background-color: #eee;
+}
+
+.image-box img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.project-item:hover .image-box img {
+    transform: scale(1.02);
+}
+
+.project-meta {
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-top: 1rem;
+    border-top: 1px solid #e0e0e0;
+    padding-top: 0.8rem;
+}
+
+.project-meta h2 {
+    font-size: 1.25rem;
+    letter-spacing: 0.05em;
+}
+
+.project-meta span {
+    font-size: 0.7rem;
+    letter-spacing: 0.15em;
+    color: #888;
+    text-transform: uppercase;
+}
+
+/* CHI SONO */
+.about {
+    max-width: 600px;
+    margin: 8rem auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+.about h3 {
+    font-size: 0.75rem;
+    font-family: 'Inter', sans-serif;
+    letter-spacing: 0.3em;
+    color: #888;
+    margin-bottom: 1.2rem;
+}
+
+.about p {
+    font-size: 0.95rem;
+    line-height: 1.8;
+    color: #333;
+}
+
+/* FOOTER */
+footer {
+    border-top: 1px solid #e0e0e0;
+    padding: 4rem 2rem 3rem;
+    text-align: center;
+    background-color: #ffffff;
+}
+
+.footer-nav {
+    display: flex;
+    justify-content: center;
+    gap: 3rem;
+    margin-bottom: 3rem;
+}
+
+.footer-nav a {
+    text-decoration: none;
+    color: #111;
+    font-size: 0.7rem;
+    letter-spacing: 0.25em;
+    transition: opacity 0.2s;
+}
+
+.footer-nav a:hover {
+    opacity: 0.5;
+}
+
+.contact-info p {
+    font-size: 0.85rem;
+    margin-bottom: 0.4rem;
+}
+
+.contact-info a {
+    color: #111;
+    text-decoration: none;
+    border-bottom: 1px solid #111;
+}
+
+.copy {
+    display: block;
+    margin-top: 2.5rem;
+    font-size: 0.65rem;
+    letter-spacing: 0.2em;
+    color: #aaa;
+}
+
+/* RESPONSIVE MOBILE */
+@media (max-width: 768px) {
+    .brand h1 { font-size: 2.2rem; }
+    .image-box { height: 30vh; }
+    .project-meta { flex-direction: column; gap: 0.2rem; }
+    .footer-nav { gap: 1.5rem; }
+}
