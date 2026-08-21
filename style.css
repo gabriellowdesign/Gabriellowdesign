@@ -1,0 +1,25 @@
+/* CONTENITORE IMMAGINI - MOSTRA L'IMMAGINE INTERA SENZA TAGLI */
+.img-wrapper {
+    width: 100%;
+    height: auto;
+    min-height: 280px;
+    background-color: #f7f6f2; /* Sfondo neutro elegatissimo */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    padding: 10px;
+}
+
+.img-wrapper img {
+    width: 100%;
+    height: auto;
+    max-height: 450px;
+    object-fit: contain; /* L'immagine NON viene più tagliata e resta intera */
+    border-radius: 6px;
+    transition: transform 0.4s ease;
+}
+
+.card:hover .img-wrapper img {
+    transform: scale(1.02);
+}
