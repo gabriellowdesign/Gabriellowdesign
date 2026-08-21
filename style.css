@@ -1,0 +1,12 @@
+/* LOGO RIPORTATO A DIMENSIONE 60PX */
+.logo-img {
+    max-height: 60px;
+    width: auto;
+    object-fit: contain;
+    display: inline-block;
+    transition: transform 0.3s ease;
+}
+
+.logo-img:hover {
+    transform: scale(1.03);
+}
